@@ -13,11 +13,18 @@ RESULTS
 
 Using the benchmarking tool <https://github.com/EleutherAI/lm-evaluation-harness> we compared Llama-3[8B] (base) vs. Meditron[7B] vs. Llama-3[8B]-Meditron V1.0 on 3 main benchmarks (MedQA, PubMedQA, MedMCQA)
 
-                                           | Llama-3[8B] Meditron V1.0 | Meditron[7B] | LLama-3[8B] 
-                                           -------|------|----------|---------------
-                                          MedQA   |   0  |  0.295   |   0.605     |  
-                                          PubMedQA|   0  |  0.716   |   0.748     |
-                                          MedMCQA |   0  |  0.279   |   0.566     |
+
+| Model             | MMLU-Medical | PubMedQA | MedMCQA | MedQA | MedQA-4-Option | Avg  |
+|-------------------|--------------|----------|---------|-------|----------------|------|
+| **BioMistral**  | -            | 68.1     | -       | 36.7  | -              | -    |
+| **Meditron 1** | -            | 55.8     | 41.0    | -     | 38.1           | -    |
+| ...               | ...          | ...      | ...     | ...   | ...            | ...  |
+| **Llama-2-7B**      | 56.3         | 61.8     | 54.4    | 44.0  | 49.6           | 53.2 |
+| **MEDITRON-7B**     | 55.6         | 74.4     | 59.2    | 47.9  | 52.0           | 57.5 |
+| ...               | ...          | ...      | ...     | ...   | ...            | ...  |
+| **MEDITRON-70B**    | 77.6         | 81.6     | 66.7    | 70.8  | 75.8           | 74.5 |
+
+
 
 
 STAY TUNED for more tuning!
@@ -30,12 +37,29 @@ This is a first iteration...many more versions to come!
 
 ABOUT US
 =================
---Alexandre Sallinen
---X
---Y
---Y
---Prof Mary-Anne Hartley
+**Alexandre Sallinen**<sup>1,2</sup>,  
+**Guillaume Boye**<sup>1,2</sup>,  
+**Michael Zhang**<sup>1,2</sup>,  
+**Maud Dupont-Roc**<sup>1,2</sup>,  
+**Bastien Bernath**<sup>1,2</sup>,  
+**Etienne Boisson**<sup>1,2</sup>,  
+**Xavier Theimer-Lienhard**<sup>1,2</sup>,  
+**Hichem Hadhri**<sup>1,2</sup>,  
+**Antoine Tran**<sup>1,2</sup>,  
+**Martin Jaggi**<sup>2</sup>,  
+**Veronique Suttels**<sup>4</sup>,  
+**Noémie Boillat-Blanco**<sup>4</sup>,  
+**Kristina Keitel**<sup>5</sup>,  
+**Mary-Anne Hartley**<sup>1,2,3</sup>  
+
+**1** LiGHT: Laboratory for Intelligent Global Health and Humanitarian Response Technologies, Yale-EPFL  
+**2** EPFL, School of Computer and Communication Sciences, Switzerland.  
+**3** Yale University, School of Medicine, Biomedical Informatics and Data Science, USA.  
+**4** CHUV, Infectious Diseases Service, Rue du Bugnon 46, Lausanne, Switzerland.  
+**5** Inselspital, Department of Pediatrics, Freiburgstrasse 20, Bern, Switzerland. 
+
 <img src="static/images/Affiliations.png">
+
 LiGHT: Laboratory for intelligent Global Health and Humanitarian Response Technologies
   <https://www.yale-light.org/>
 MLO: Machine Learning & Optimization Lab
